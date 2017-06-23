@@ -9,7 +9,7 @@
 }
 
 .page-wrap .sections-col {
-  flex: 1 1 auto;
+  flex: auto;
 }
 
 header {
@@ -57,5 +57,23 @@ header .sidebar nav ul li a:hover {
 
 section.hero {
   text-align: center;
-  background-color: pink;
+  height: 450px;
+  background-image: url("../img/background.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: white;
+  font-family: "Fira Sans Condensed";
+}
+
+section.hero h1 {
+  font-size: 48px;
+  font-weight: normal;
+}
+
+section.hero p {
+  font-size: 32px;
 }
