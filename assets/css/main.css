@@ -1,0 +1,61 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.page-wrap {
+  display: flex;
+  min-height: 100vh;
+}
+
+.page-wrap .sections-col {
+  flex: 1 1 auto;
+}
+
+header {
+  width: 240px;
+  border-right: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+header .sidebar {
+  position: fixed;
+  width: 240px;
+  display: flex;
+  flex-direction: column;
+}
+
+header .sidebar img {
+  margin-left: auto;
+  width: 52px;
+  padding: 20px;
+}
+
+header .sidebar nav {
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+header .sidebar nav ul {
+  list-style: none;
+  text-align: right;
+  padding: 0 20px;
+}
+
+header .sidebar nav ul li {
+  margin: 40px 0;
+}
+
+header .sidebar nav ul li a {
+  color: #212121;
+  font-family: "Fira Sans Condensed";
+  font-size: 18px;
+  text-decoration: none;
+}
+
+header .sidebar nav ul li a:hover {
+  color: #4CAF50;
+}
+
+section.hero {
+  text-align: center;
+  background-color: pink;
+}
