@@ -2,19 +2,23 @@ section.hero
   text-align: center
   height: 450px
   background:
-    image: url("../img/background.jpeg")
+
     size: cover
     position: center
     attachment: fixed
+    color: $primary-color
   display: flex
   flex-direction: column
   justify-content: center
   color: white
   font-family: $heading-font
+  transition: all 500ms ease-in-out
   h1
     font:
       size: 48px
       weight: normal
+  h2
+    display: none
   p
     font-size: 32px
 
@@ -27,9 +31,13 @@ section.hero-fixed
   background-color: $primary-color
   color: white
   font-family: $heading-font
-  height: 92px
+  height: 93px
   width: 100%
+  box-shadow: 0px 2px 4px rgba(0,0,0,0.4)
   h1
+    display: none
+  h2
+    display: none
     margin-left: 20px
     font:
       size: 32px
