@@ -8,9 +8,9 @@ function transformHeader() {
 
     if(distanceTop > 358) {
       $('.hero').removeClass('hero').addClass('hero-fixed');
-      $('.hero-fixed h2').fadeIn();
+      $('.hero-fixed h1:nth-child(2)').fadeIn();
     } else if(distanceTop === 0) {
-      $('.hero-fixed h2').hide();
+      $('.hero-fixed h1:nth-child(2)').hide();
       $('.hero-fixed').removeClass('hero-fixed').addClass('hero');
     }
   });
