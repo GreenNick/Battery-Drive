@@ -7,11 +7,11 @@ function transformHeader() {
     var distanceTop = $(window).scrollTop();
 
     if(distanceTop > 358) {
-      $('.hero').removeClass('hero').addClass('hero-fixed');
-      $('.hero-fixed h1:nth-child(2)').fadeIn();
-    } else if(distanceTop === 0) {
-      $('.hero-fixed h1:nth-child(2)').hide();
-      $('.hero-fixed').removeClass('hero-fixed').addClass('hero');
+      $('.hero-fixed').css({'display':'flex'});
+      $('.hero-fixed h1').fadeIn('fast');
+    } else if(distanceTop < 358) {
+      $('.hero-fixed').css({'display':'none'});
+      $('.hero-fixed h1').hide('');
     }
   });
 }
