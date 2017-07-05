@@ -15,14 +15,18 @@ header
       ul
         list-style: none
         text-align: right
-        padding: 0 20px
+        padding: 0 15px
         li
           margin: 50px 0
           a
+            display: block
             color: $primary-text-color
+            padding-right: 10px
+            transition: all 100ms ease-in-out
             font:
               family: $heading-font
               size: 18px
             text-decoration: none
             &:hover
               color: $primary-color
+              border-right: 4px solid $primary-color

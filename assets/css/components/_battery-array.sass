@@ -1,0 +1,39 @@
+.battery-array
+  display: flex
+  justify-content: space-between
+  flex-wrap: wrap
+  .cell
+    border-radius: 2px
+    display: block
+    text-decoration: none
+    margin: 6px 0
+    width: 152px
+    height: 152px
+    background-color: $primary-color
+    overflow: hidden
+    transition: all 250ms ease-in-out
+    &:last-child
+      visibility: hidden
+    p
+      padding: 6px
+      color: white
+      font-size: 24px
+      line-height: normal
+    .overlay
+      position: absolute
+      display: flex
+      flex-direction: column-reverse
+      transition: all 250ms ease-in-out
+      background: rgba(0,0,0,0.2)
+      height: 0
+      width: 100%
+      top: 0px
+      p
+        padding: 6px
+        font-size: 18px
+        line-height: normal
+        text-align: right
+    &:hover
+      transform: scale(1.05)
+      .overlay
+        height: 100%

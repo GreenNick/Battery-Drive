@@ -1,3 +1,58 @@
+.battery-array {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.battery-array .cell {
+  border-radius: 2px;
+  display: block;
+  text-decoration: none;
+  margin: 6px 0;
+  width: 152px;
+  height: 152px;
+  background-color: #4CAF50;
+  overflow: hidden;
+  transition: all 250ms ease-in-out;
+}
+
+.battery-array .cell:last-child {
+  visibility: hidden;
+}
+
+.battery-array .cell p {
+  padding: 6px;
+  color: white;
+  font-size: 24px;
+  line-height: normal;
+}
+
+.battery-array .cell .overlay {
+  position: absolute;
+  display: flex;
+  flex-direction: column-reverse;
+  transition: all 250ms ease-in-out;
+  background: rgba(0, 0, 0, 0.2);
+  height: 0;
+  width: 100%;
+  top: 0px;
+}
+
+.battery-array .cell .overlay p {
+  padding: 6px;
+  font-size: 18px;
+  line-height: normal;
+  text-align: right;
+}
+
+.battery-array .cell:hover {
+  transform: scale(1.05);
+}
+
+.battery-array .cell:hover .overlay {
+  height: 100%;
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -10,13 +65,14 @@
 
 .page-wrap .sections-col {
   flex: auto;
+  background: rgba(0, 0, 0, 0.05);
 }
 
 .content {
   display: flex;
   flex-direction: column;
   max-width: 640px;
-  margin: 120px auto;
+  margin: 100px auto;
 }
 
 .content h2 {
@@ -28,6 +84,7 @@
 }
 
 .content p {
+  line-height: 150%;
   font-size: 18px;
   font-family: "Fira Sans";
   color: #212121;
@@ -58,7 +115,7 @@ header .sidebar nav {
 header .sidebar nav ul {
   list-style: none;
   text-align: right;
-  padding: 0 20px;
+  padding: 0 15px;
 }
 
 header .sidebar nav ul li {
@@ -66,7 +123,10 @@ header .sidebar nav ul li {
 }
 
 header .sidebar nav ul li a {
+  display: block;
   color: #212121;
+  padding-right: 10px;
+  transition: all 100ms ease-in-out;
   font-family: "Fira Sans Condensed";
   font-size: 18px;
   text-decoration: none;
@@ -74,6 +134,7 @@ header .sidebar nav ul li a {
 
 header .sidebar nav ul li a:hover {
   color: #4CAF50;
+  border-right: 4px solid #4CAF50;
 }
 
 section.hero {
@@ -91,12 +152,12 @@ section.hero {
 }
 
 section.hero h1 {
-  font-size: 48px;
+  font-size: 56px;
   font-weight: normal;
 }
 
 section.hero p {
-  font-size: 32px;
+  font-size: 42px;
 }
 
 section.hero-fixed {
@@ -113,6 +174,7 @@ section.hero-fixed {
   width: 100%;
   box-shadow: 0px 4px 3px -2px rgba(0, 0, 0, 0.4);
   transition: all 500ms ease-in-out;
+  z-index: 2;
 }
 
 section.hero-fixed h1 {
