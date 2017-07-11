@@ -1,4 +1,5 @@
 .battery-array {
+  margin-top: 20px;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -21,6 +22,7 @@
 }
 
 .battery-array .cell p {
+  margin: 0;
   padding: 6px;
   color: white;
   font-size: 24px;
@@ -76,18 +78,23 @@
 }
 
 .content h2 {
-  font-size: 32px;
+  font-size: 36px;
   font-family: "Fira Sans Condensed";
   font-weight: normal;
-  padding: 20px 0;
+  padding: 20px 0 0 0;
   color: #4CAF50;
 }
 
 .content p {
   line-height: 150%;
+  margin-top: 20px;
   font-size: 18px;
   font-family: "Fira Sans";
   color: #212121;
+}
+
+.content .secondary-text {
+  color: #757575;
 }
 
 header {
