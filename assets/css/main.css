@@ -7,23 +7,32 @@
 
 .battery-array .cell {
   border-radius: 2px;
-  display: block;
   text-decoration: none;
   margin: 6px 0;
-  width: 152px;
-  height: 152px;
+  width: 148px;
+  height: 148px;
   background-color: #4CAF50;
+  border: 2px solid #388E3C;
   overflow: hidden;
   transition: all 250ms ease-in-out;
 }
 
 .battery-array .cell:last-child {
-  visibility: hidden;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.battery-array .cell:last-child img {
+  margin: auto;
+  width: 120px;
+  height: 120px;
+  transition: all 250ms ease-in-out;
 }
 
 .battery-array .cell p {
   margin: 0;
-  padding: 6px;
+  padding: 4px;
   color: white;
   font-size: 24px;
   line-height: normal;
@@ -53,6 +62,10 @@
 
 .battery-array .cell:hover .overlay {
   height: 100%;
+}
+
+.battery-array .cell:hover img {
+  transform: rotate(360deg);
 }
 
 * {
