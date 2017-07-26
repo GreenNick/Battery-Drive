@@ -8,19 +8,19 @@ function transformHeader() {
     var distanceTop = $(window).scrollTop();
     if($(window).width() < 1000) {
       switch (true) {
-      case distanceTop > $('.hero').innerHeight():
-        $('.hero-fixed').css({'height':'93px'});
+      case distanceTop > $('header').innerHeight():
+        $('.fixed').css({'height':'93px'});
         break;
       default:
-        $('.hero-fixed').css({'height':'0'});
+        $('.fixed').css({'height':'0'});
       }
     } else {
       switch (true) {
-        case distanceTop > $('.hero').innerHeight() - 93:
-          $('.hero-fixed').css({'height':'93px'});
+        case distanceTop > $('header').innerHeight() - 93:
+          $('.fixed').css({'height':'93px'});
           break;
         default:
-          $('.hero-fixed').css({'height':'0'});
+          $('.fixed').css({'height':'0'});
       }
     }
   });

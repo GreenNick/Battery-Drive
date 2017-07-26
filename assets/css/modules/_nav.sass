@@ -1,0 +1,38 @@
+nav
+  width: 240px
+  border-right: 1px solid rgba(0,0,0,0.2)
+  .sidebar
+    position: fixed
+    width: 240px
+    display: flex
+    flex-direction: column
+    img
+      margin-left: auto
+      width: 52px
+      padding: 20px
+    ul
+      border-top: 1px solid rgba(0,0,0,0.2)
+      list-style: none
+      text-align: right
+      padding: 0 15px
+      li
+        margin: 50px 0
+        a
+          display: block
+          color: $primary-text-color
+          padding-right: 10px
+          transition: all 100ms ease-in-out
+          font:
+            family: $heading-font
+            size: 18px
+          text-decoration: none
+          &:hover
+            color: $primary-color
+            border-right: 4px solid $primary-color
+    .navIndicator
+      color: $primary-color
+      border-right: 4px solid $primary-color
+
+@media (max-width: 1000px)
+  nav
+    display: none
