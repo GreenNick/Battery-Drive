@@ -240,7 +240,8 @@ nav {
           transition: all 100ms ease-in-out;
           font-family: "Fira Sans Condensed";
           font-size: 18px;
-          text-decoration: none; }
+          text-decoration: none;
+          outline: none; }
           nav .sidebar ul li a:hover {
             color: #4CAF50;
             border-right: 4px solid #4CAF50; }

@@ -1,6 +1,7 @@
 $(document).ready(function() {
   navHover();
   transformHeader();
+  scrollTo(200);
 });
 
 function transformHeader() {
@@ -62,5 +63,16 @@ function navHover() {
       default:
         $menuItems.removeClass('navIndicator');
     }
+  });
+}
+
+function scrollTo(duration) {
+  $('a[href|="#section"').on('click', function(event) {
+    var target = $($(this).attr('href'));
+
+    event.preventDefault();
+    $('html, body').animate({
+      scrollTop: target.offset().top - 120
+    }), duration;
   });
 }
