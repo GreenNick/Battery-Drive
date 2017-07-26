@@ -1,11 +1,9 @@
-.content
-  display: flex
-  flex-direction: column
+section
   max-width: 640px
-  margin: 100px auto
+  margin: 5vh auto
   h2
     font:
-      size: 36px
+      size: 2em
       family: $heading-font
       weight: normal
     padding: 20px 0 0 0
@@ -14,8 +12,13 @@
     line-height: 150%
     margin-top: 20px
     font:
-      size: 18px
+      size: 1.125em
       family: $primary-font
     color: $primary-text-color
   .secondary-text
     color: $secondary-text-color
+
+@media (max-width: 1000px)
+  section
+    max-width: 100%
+    margin: 100px 16px
