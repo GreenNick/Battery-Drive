@@ -1,5 +1,4 @@
 .location-info
-  width: 100%
   background-color: white
   margin-top: 20px
   padding: 16px
@@ -22,6 +21,8 @@
         family: $heading-font
         weight: normal
     a
+      position: relative
+      top: 0px
       box-shadow: 0 2px 2px rgba(0,0,0,0.4)
       text-align: center
       display: block
@@ -30,11 +31,13 @@
       text-decoration: none
       outline: none
       color: white
+      transition: all 100ms ease-in-out
       font:
         size: 28px
         family: $primary-font
       &:hover
-        
+        top: -2px
+        box-shadow: 0 5px 2px -1px rgba(0,0,0,0.4)
   address
     border-left: 4px solid $primary-color
     font:
@@ -45,3 +48,11 @@
     background-color: $primary-color-light
     padding: 4px
     flex: 1
+
+@media (max-width: 1000px)
+  .location-info
+    .cta
+      margin: 0
+      a
+        margin: 20px 0
+    flex-direction: column
