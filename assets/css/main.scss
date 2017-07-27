@@ -1,6 +1,13 @@
+//Helpers
 @import 'helpers/variables';
-@import 'components/battery-array';
+
+//Layout
 @import 'layout/base';
 @import 'layout/content';
+
+//Modules
+@import 'modules/battery-array';
 @import 'modules/header';
 @import 'modules/nav';
+@import 'modules/location-info';
+@import 'modules/footer';
