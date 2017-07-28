@@ -1,7 +1,10 @@
+var mobileNavOpen = false;
+
 $(document).ready(function() {
   navHover();
   transformHeader();
   scrollTo(200);
+  extendNav();
 });
 
 function transformHeader() {
@@ -12,7 +15,7 @@ function transformHeader() {
 
     if($(window).width() < 1000) {
       switch (true) {
-      case distanceTop >= headerTop:
+      case distanceTop >= headerTop || mobileNavOpen === true:
         $fixed.css({'height':'93px'});
         break;
       default:
@@ -80,5 +83,16 @@ function scrollTo(duration) {
     $('html, body').animate({
       scrollTop: target.offset().top - 120
     }), duration;
+    $('.mobile-nav').removeClass('is-open');
+  });
+}
+
+function extendNav() {
+  $('.mobile-menu').on('click', function(event) {
+    $('.mobile-nav').toggleClass('is-open');
+    mobileNavOpen = !mobileNavOpen;
+    if($('header').innerHeight() > $(window).scrollTop()) {
+      $('.fixed').css({'height':'0'});
+    }
   });
 }
